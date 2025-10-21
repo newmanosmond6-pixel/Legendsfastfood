@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Legend's Fast Food — Your Cravings, Our Speed.</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="apple-touch-icon" href="logo.jpeg">
+</head>
+<body>
+  <header class="site-header">
+    <img src="logo.jpeg" alt="Legend's Fast Food" class="logo">
+    <div class="brand">
+      <h1>Legend's Fast Food</h1>
+      <div class="slogan">Your Cravings, Our Speed.</div>
+    </div>
+    <nav class="top-nav">
+      <a href="dashboard.html" class="small">Merchant Dashboard</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" style="background-image:url('wallpaper.jpeg')">
+      <div class="flag">Now Open in Sunyani!</div>
+      <div class="hero-inner">
+        <h2>Legend's Fast Food</h2>
+        <p class="hero-sub">Fast local dishes delivered to your door.</p>
+        <div class="hero-actions">
+          <button id="btnOrderNow" class="btn primary">Order Now</button>
+          <a class="btn" id="whatsappBtn" href="https://wa.me/233591033284" target="_blank" rel="noopener">Order on WhatsApp</a>
+        </div>
+      </div>
+      <img src="logo.jpeg" class="hero-logo" alt="logo">
+    </section>
+
+    <section class="container">
+      <div class="controls">
+        <div>
+          <label for="categorySelect">Category</label>
+          <select id="categorySelect">
+            <option value="All">All</option>
+            <option value="Foods">Foods</option>
+            <option value="Drinks">Drinks</option>
+            <option value="Drugs">Drugs & Essentials</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="locationSelect">Delivery Location</label>
+          <select id="locationSelect">
+            <!-- distances (km) are sample presets -->
+            <option value="Asuotiano" data-dist="3">Asuotiano (3 km)</option>
+            <option value="Wamfie" data-dist="8">Wamfie (8 km)</option>
+            <option value="Wamnafo" data-dist="12">Wamnafo (12 km)</option>
+            <option value="Kyeremasu" data-dist="16">Kyeremasu (16 km)</option>
+            <option value="Dormaa" data-dist="35">Dormaa (35 km)</option>
+            <option value="Berekum" data-dist="42">Berekum (42 km)</option>
+            <option value="Sunyani" data-dist="55">Sunyani (55 km)</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="perKmRate">Per-km rate (GHS)</label>
+          <input id="perKmRate" type="number" value="0.50" step="0.01">
+        </div>
+      </div>
+
+      <h3>Menu</h3>
+      <div id="menuGrid" class="grid"></div>
+
+      <div class="cart-panel">
+        <h4>Your Cart</h4>
+        <div id="cartItems"></div>
+        <div class="cart-summary">
+          <div>Delivery Fee: <span id="deliveryFee">GHS 0.00</span></div>
+          <div>Total: <strong id="cartTotal">GHS 0.00</strong></div>
+        </div>
+        <div class="cart-actions">
+          <button id="btnClear" class="btn">Clear</button>
+          <button id="btnCheckout" class="btn primary">Checkout</button>
+        </div>
+        <div class="small muted">Customer phone & total are collected at checkout.</div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Order modal -->
+  <div id="orderModal" class="modal hidden">
+    <div class="modal-body">
+      <h3>Checkout</h3>
+      <form id="orderForm">
+        <input id="custName" placeholder="Full name" required>
+        <input id="custPhone" placeholder="Phone number" required>
+        <input id="custAddress" placeholder="Delivery address" required>
+        <div class="small">Payment: Cash on Delivery (MTN Mobile Money can be added later)</div>
+
+        <div class="order-summary">
+          <div>Items: <span id="summaryItems">0</span></div>
+          <div>Delivery Fee: <span id="summaryDelivery">GHS 0.00</span></div>
+          <div>Total: <strong id="summaryTotal">GHS 0.00</strong></div>
+        </div>
+
+        <div style="display:flex;gap:8;margin-top:10px;">
+          <button type="button" id="cancelOrder" class="btn">Cancel</button>
+          <button type="submit" class="btn primary">Place Order</button>
+        </div>
+      </form>
+      <div class="small muted">Orders are saved locally in your merchant dashboard demo.</div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
