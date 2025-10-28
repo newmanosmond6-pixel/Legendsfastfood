@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foodbanku</title>
+    <link rel="stylesheet" href="foodbanku.css">
+</head>
+<body>
+    <header>
+        <h1>Banku & Soup</h1>
+    </header>
+ <a href="index.html" class="arrow"><img src="images\arrow.jpg" alt="Back arrow"></a>
+    <main>
+        <div class="menu-container">
+            <section class="food-items">
+                <h2>Banku & Soup</h2>
+                <div class="item">
+                    <label for="banku">1 ball of Banku</label>
+                    <span class="price">GH₵5</span>
+                    <input type="number" id="banku" min="0" value="0">
+                </div>
+                <div class="item">
+                    <label for="chicken">Chicken Meat</label>
+                    <span class="price">GH₵10</span>
+                    <input type="number" id="chicken" min="0" value="0">
+                </div>
+                <div class="item">
+                    <label for="beef">Beef Meat</label>
+                    <span class="price">GH₵5</span>
+                    <input type="number" id="beef" min="0" value="0">
+                </div>
+                <div class="item">
+                    <label for="fish">Fish Meat</label>
+                    <span class="price">GH₵10</span>
+                    <input type="number" id="fish" min="0" value="0">
+                </div>
+                <div class="item">
+                    <label for="fried-fish">Fried Fish</label>
+                    <span class="price">GH₵4</span>
+                    <input type="number" id="fried-fish" min="0" value="0">
+                </div>
+                <div class="item">
+                    <label for="wele">Wele</label>
+                    <span class="price">GH₵5</span>
+                    <input type="number" id="wele" min="0" value="0">
+                </div>
+            </section>
+
+            <section class="soups">
+                <h2>Soups</h2>
+                <div class="separator"></div>
+                <div class="item">
+                    <label for="palmnut">Palmnut Soup</label>
+                    <span class="price"></span>
+                    <input type="checkbox" >
+                </div>
+                <div class="item">
+                    <label for="groundnut">Groundnut Soup</label>
+                    <input type="checkbox">
+                </div>
+                <div class="item">
+                    <label for="okro">Okro Soup</label>
+                    <span class="price">GH₵3</span>
+                    <input type="checkbox">
+                </div>
+            </section>
+
+            <div class="total-section">
+                <h3>Total Amount: <span id="total-amount">GH₵0</span></h3>
+                <button id="order-btn">Place Order</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
